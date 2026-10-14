@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration | Akshay A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand-mark" aria-hidden="true">SA</div>
+    <div>
+      <p class="eyebrow">STUDENT ADMISSION PORTAL</p>
+      <h1>Student Registration</h1>
+      <p class="subheading">Enter your details to create a student profile.</p>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="form-card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">APPLICATION FORM</p>
+          <h2>Personal and Academic Details</h2>
+        </div>
+        <span class="required-note"><span>*</span> Required fields</span>
+      </div>
+
+      <div id="formMessage" class="message" role="status" aria-live="polite"></div>
+      <form id="registrationForm" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="fullName">Full name <span>*</span></label>
+            <input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="Akshay A" required>
+            <small class="error" id="fullNameError"></small>
+          </div>
+          <div class="field">
+            <label for="rollNo">Roll number <span>*</span></label>
+            <input id="rollNo" name="rollNo" type="text" placeholder="24CS015" required>
+            <small class="error" id="rollNoError"></small>
+          </div>
+          <div class="field">
+            <label for="email">Email address <span>*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+            <small class="error" id="emailError"></small>
+          </div>
+          <div class="field">
+            <label for="course">Course <span>*</span></label>
+            <select id="course" name="course" required>
+              <option value="">Choose a course</option>
+              <option>B.E. Computer Science and Engineering</option>
+              <option>B.Tech Information Technology</option>
+              <option>B.E. Electronics and Communication Engineering</option>
+              <option>B.Tech Artificial Intelligence and Data Science</option>
+            </select>
+            <small class="error" id="courseError"></small>
+          </div>
+          <div class="field">
+            <label for="password">Create password <span>*</span></label>
+            <input id="password" name="password" type="password" autocomplete="new-password" placeholder="At least 8 characters" required>
+            <div class="strength-track"><div id="strengthBar"></div></div>
+            <small id="strengthText" class="hint">Use uppercase, lowercase, a number and a symbol.</small>
+            <small class="error" id="passwordError"></small>
+          </div>
+          <div class="field">
+            <label for="confirmPassword">Confirm password <span>*</span></label>
+            <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" placeholder="Re-enter password" required>
+            <small class="error" id="confirmPasswordError"></small>
+          </div>
+          <div class="field">
+            <label for="profilePhoto">Profile photo <span>*</span></label>
+            <input id="profilePhoto" name="profilePhoto" type="file" accept=".jpg,.jpeg,.png,image/jpeg,image/png" required>
+            <small class="hint">JPG or PNG, maximum 2 MB.</small>
+            <small class="error" id="profilePhotoError"></small>
+          </div>
+          <div class="field">
+            <label for="document">Certificate / ID proof</label>
+            <input id="document" name="document" type="file" accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png">
+            <small class="hint">PDF, JPG or PNG, maximum 5 MB.</small>
+            <small class="error" id="documentError"></small>
+          </div>
+        </div>
+        <label class="terms"><input id="terms" type="checkbox"> <span>I confirm that the information entered is correct.</span></label>
+        <small class="error" id="termsError"></small>
+        <div class="actions">
+          <button class="button primary" type="submit">Validate registration</button>
+          <button class="button secondary" type="reset" id="resetButton">Clear form</button>
+        </div>
+      </form>
+
+      <section id="successPanel" class="success-panel" hidden>
+        <div class="success-icon">✓</div>
+        <div><h2>Form validated successfully</h2><p id="successSummary"></p><p class="hint">This front-end demonstration does not save data to a server.</p></div>
+      </section>
+    </section>
+    <footer>Web Technology Assignment · Akshay A · 24CS015 · III-CSE-A</footer>
+  </main>
+  <script src="validation.js"></script>
+</body>
+</html>

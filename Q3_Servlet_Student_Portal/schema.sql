@@ -1,0 +1,4 @@
+-- This project reads the student_admin schema created for Question 2.
+-- Tables required: students(id, name, roll_no, email, course)
+-- student_files(id, student_id, original_name, stored_name, mime_type, file_size, category, uploaded_at)
+-- No duplicate schema is created here; use the schema.sql from Q2.

@@ -1,0 +1,24 @@
+CREATE DATABASE IF NOT EXISTS student_admin CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE student_admin;
+
+CREATE TABLE IF NOT EXISTS students (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    roll_no VARCHAR(20) NOT NULL UNIQUE,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    course VARCHAR(120) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS student_files (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    student_id INT UNSIGNED NOT NULL,
+    original_name VARCHAR(255) NOT NULL,
+    stored_name VARCHAR(255) NOT NULL UNIQUE,
+    mime_type VARCHAR(100) NOT NULL,
+    file_size INT UNSIGNED NOT NULL,
+    category ENUM('profile_image','document') NOT NULL,
+    uploaded_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_student_files_student FOREIGN KEY (student_id)
+        REFERENCES students(id) ON DELETE CASCADE
+);

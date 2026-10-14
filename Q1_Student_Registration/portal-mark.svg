@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="80" viewBox="0 0 240 80">
+  <rect x="2" y="2" width="76" height="76" rx="18" fill="#172b4d"/>
+  <text x="40" y="51" font-family="Georgia,serif" font-size="28" text-anchor="middle" fill="#ffffff" font-weight="bold">SA</text>
+  <text x="94" y="35" font-family="Georgia,serif" font-size="18" fill="#172b4d" font-weight="bold">Student Portal</text>
+  <text x="94" y="57" font-family="Georgia,serif" font-size="12" fill="#68778e">Registration & Records</text>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee" version="6.0">
+    <display-name>Student Profile Portal</display-name>
+    <context-param>
+        <param-name>uploadRoot</param-name>
+        <param-value>/replace/with/your/private/uploads/folder</param-value>
+    </context-param>
+    <session-config>
+        <session-timeout>20</session-timeout>
+        <cookie-config>
+            <http-only>true</http-only>
+        </cookie-config>
+        <tracking-mode>COOKIE</tracking-mode>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
